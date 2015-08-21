@@ -7,7 +7,7 @@
  *Freddy Jose Ruiz Gatica 14592
  *------------------------------------------------------------------
  *Cicular: Esta clase permite crear listas circulares utilizando Nodos simples
- * @param <E>: Este par·metro permite establecer el tipo de dato con el que se desea trabajar la
+ * @param <E>: Este par√°metro permite establecer el tipo de dato con el que se desea trabajar la
  * Lista
  **/
 public class Circular<E> extends ListaAbstracta<E>{
@@ -15,9 +15,9 @@ public class Circular<E> extends ListaAbstracta<E>{
 	//private int elementos;
 	
 	/**
-	 * MÈtodo: Circular
+	 * M√©todo: Circular
 	 * Funcionalidad:
-	 * Constructor en la primera posiciÛn y el count igual a 0
+	 * Constructor en la primera posici√≥n y el count igual a 0
 	 */
 	public Circular(){
 		super();
@@ -30,7 +30,7 @@ public class Circular<E> extends ListaAbstracta<E>{
 	
 	public void addFirst(E value) {
 		Nodo<E> temp= new Nodo<E>(value);
-		if (cabeza== null){//Lista vacÌa
+		if (cabeza== null){//Lista vac√≠a
 		cabeza=temp; //Se inicializa en null para crear la referencia a la cabeza
 		cabeza.setNext(cabeza);
 		}
@@ -41,20 +41,9 @@ public class Circular<E> extends ListaAbstracta<E>{
 		count++;
 		}
 	public E removeFirst(){
-		Nodo <E> apuntador = cabeza; //Iniciando el recorrido desde el comienzo
-		Nodo <E> temporal= cabeza;
-		while(apuntador.next() != cabeza){
-			apuntador=apuntador.next();//Almacena el nodo siguiente
-		}
-	if (apuntador != cabeza){
-		apuntador.setNext(cabeza.next());
-		cabeza=apuntador;
+	Nodo <E> temporal= cabeza;
+		cabeza= cabeza.next();
 		count--;
-	}
-	else{
-		cabeza=null;
-		count--;
-	}
 		return temporal.valor();
 	}
 	public E removeLast(){
