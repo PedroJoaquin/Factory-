@@ -7,51 +7,55 @@
  *Freddy Jose Ruiz Gatica 14592
  *------------------------------------------------------------------
  *Interface Stack:
- *Esta clase genérica únicamente contiene los métodos genéricos a implementar en la controladora 
+ *Esta clase genÃ©rica Ãºnicamente contiene los mÃ©todos genÃ©ricos a implementar en la controladora 
  *de la stack.
- * @param <P>: Este parámetro permite establecer el tipo de dato con el que se desea trabajar la 
+ * @param <P>: Este parÃ¡metro permite establecer el tipo de dato con el que se desea trabajar la 
  * Stack.
  **/
 public interface ADTStack<E>{
 	/**
-	 *Método: empty()
+	 *MÃ©todo: empty()
 	 *Funcionalidad: Es el encargado de limpiar la pila.
+	 * No requiere de ningun parametro y no regresa ningun valor
 	 */
 	public void empty();
 	/**
-	 * Método: isEmpty()
-	 * Funcionalidad: Este método está encargado de revisar 
-	 * si la pila se encuentra vacía.
-	 * @return true: vacía / false: No lo está
+	 * MÃ©todo: isEmpty()
+	 * Funcionalidad: Este mÃ©todo estÃ¡ encargado de revisar 
+	 * si la pila se encuentra vacÃ­a.
+	 * No requiere de ningun parametro 
+	 * @return true: vacÃ­a / false: No lo estÃ¡
 	 */
 	public boolean isEmpty();
 	/**
-	 * Método: push(E x);
+	 * MÃ©todo: push(E x);
 	 * @param x: Valor a almacenar en la pila
 	 * Funcionalidad: Es encargado de guardar en la pila el valor ingresado
-	 * como parámetro.
+	 * como parÃ¡metro.
+	 * Requiere de un parametro de tipo E diferente a null
 	 * 
 	 */
 	public void push(E x) ;
 	/**
-	 * Método: pop()
+	 * MÃ©todo: pop()
 	 * Funcionlidad: 
-	 * Es encargado de sacar de la pila el último valor guardado y lo borra de la pila.
+	 * Es encargado de sacar de la pila el Ãºltimo valor guardado y lo borra de la pila.
+	 * No requiere ningun parametro de entrada 
 	 * @return E
 	 * @throws Exception
 	 */
 	public E pop() throws Exception;
 	/**
-	 * Método: size()
+	 * MÃ©todo: size()
 	 * Funcionalidad:
-	 * Retorna el tamaño actual de la pila.
+	 * Retorna el tamaÃ±o actual de la pila.
 	 * @return int
 	 */
 	public int size();
 	/**
-	 * Método: peek()
+	 * MÃ©todo: peek()
 	 * Funcionalidad:
-	 * Retorna el último valor de la pila sin borrarlo de la misma.
+	 * Retorna el Ãºltimo valor de la pila sin borrarlo de la misma.
 	 * @return E
 	 * @throws Exception
 	 */
