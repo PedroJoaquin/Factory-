@@ -34,7 +34,7 @@ double val=0;
 		System.out.println("OPS, no es posible realizar la operación");
 		System.exit(0);
 	}
-	assertEquals(15 ,(int) val);
+	assertEquals(4 ,(int) val);
 	}
 	
 /**
@@ -58,7 +58,7 @@ double val=0;
 		System.out.println("OPS, no es posible realizar la operación");
 		System.exit(0);
 	}
-	assertEquals(15 ,(int) val);
+	assertEquals(4 ,(int) val);
 	}
 /**
  * Simpletest:
@@ -81,7 +81,7 @@ double val=0;
 				System.out.println("OPS, no es posible realizar la operación");
 				System.exit(0);
 			}
-			assertEquals(15 ,(int) val);
+			assertEquals(4 ,(int) val);
 	}
 /**
  * Circulartest:
@@ -105,6 +105,26 @@ double val=0;
 				System.out.println("OPS, no es posible realizar la operación");
 				System.exit(0);
 			}
-			assertEquals(15 ,(int) val);
+			assertEquals(4 ,(int) val);
+	}
+	
+	@Test
+	public void DobleEnlazadaTest() {
+		calculadora= new CalPostFix("4");
+		try {
+			calculadora.readFile("src\\texto.txt");
+		}  
+		catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			val=calculadora.calcular();
+		}
+		catch (Exception NullPointerException){
+			System.out.println("OPS, no es posible realizar la operación");
+			System.exit(0);
+		}
+		assertEquals(4,(int) val);
 	}
 	}
