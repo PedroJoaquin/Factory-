@@ -8,7 +8,8 @@
  *------------------------------------------------------------------
  *StackCircular: Esta clase es una clase hija de AbstractStack<E>
  *la cual implementa los metodos faltantes en la clasde Padre
- *utilizando los metodos de la clase Circular<E>
+ *utilizando los metodos de la clase Circular<E>. Por lo cual es
+ * considerado innecesario agregar comentarios a los métodos antes comentados.
  **/
 public class StackCircular<E> extends AbstractStack<E>{
 
