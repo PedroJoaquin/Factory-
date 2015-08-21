@@ -9,24 +9,28 @@ import java.io.FileNotFoundException;
  *Freddy Jose Ruiz Gatica 14592
  *------------------------------------------------------------------
  *Interface Stack:
- *Esta clase genÈrica ˙nicamente contiene los mÈtodos genÈricos a implementar en la controladora 
+ *Esta clase gen√©rica √∫nicamente contiene los m√©todos gen√©ricos a implementar en la controladora 
  *de la stack.
- * @param <P>: Este par·metro permite establecer el tipo de dato con el que se desea trabajar la 
+ * @param <P>: Este par√°metro permite establecer el tipo de dato con el que se desea trabajar la 
  * calculadora Stack.
  **/
 
 public interface ADTCalculadora<P> {
 	
 	/** 
-	 * MÈtodo: readFile
-	 * Funcionalidad: Lectura del archivo de texto, indic·ndole mediante el par·metro la ubicaciÛn del mismo
-	 * @param file:DirecciÛn en el computador que indique la ubicaciÛn del archivo de texto a leer.
+	 * M√©todo: readFile
+	 * pre: File != null
+	 * post: return void
+	 * Funcionalidad: Lectura del archivo de texto, indic√°ndole mediante el par√°metro la ubicaci√≥n del mismo
+	 * @param file:Direcci√≥n en el computador que indique la ubicaci√≥n del archivo de texto a leer.
 	 */
 	public void readFile(String file) throws FileNotFoundException, Exception;
 	/**
-	 * MÈtodo: calcular()
-	 * Funcionalidad: PUSH y POP en la stack los valores leÌdos como el resultado obtenido de operarlos.
-	 * @return: El resultado del c·lculo en double.
+	 * pre: None
+	 * post: double resultado
+	 * M√©todo: calcular()
+	 * Funcionalidad: PUSH y POP en la stack los valores le√≠dos como el resultado obtenido de operarlos.
+	 * @return: El resultado del c√°lculo en double.
 	 */
 	public double calcular();
 }
