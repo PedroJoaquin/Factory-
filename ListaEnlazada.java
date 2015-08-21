@@ -14,7 +14,6 @@
 public interface ListaEnlazada<E>{
 		/**
 		 *Metodo Size: Retorna el tamano de la lista (elementos en la lista)
-		 *@retunr Retorna el tamano de la lista 
 		 */
 		public int size();
 		/**

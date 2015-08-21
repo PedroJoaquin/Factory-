@@ -64,12 +64,15 @@ public class CalPostFix implements ADTCalculadora<Double>{
 				break;
 			case '2' :	
 				pila.push(2.0);
+			
 				break;
 			case '3':	
 				pila.push(3.0);
+			
 				break;
 			case '4':	
 				pila.push(4.0);
+			
 				break;
 			case '5' :	
 				pila.push(5.0);
@@ -89,7 +92,7 @@ public class CalPostFix implements ADTCalculadora<Double>{
 			case '+' :
 				try{
 				operando2=pila.pop();
-				operando1=pila.peek();
+				operando1=pila.pop();
 				pila.push((operando1+operando2));
 				break;
 				}
@@ -99,7 +102,7 @@ public class CalPostFix implements ADTCalculadora<Double>{
 			case '-':
 				try{
 					operando2=pila.pop();
-					operando1=pila.peek();
+					operando1=pila.pop();
 					pila.push((operando1-operando2));
 					break;
 				}
@@ -109,7 +112,7 @@ public class CalPostFix implements ADTCalculadora<Double>{
 			case '*':
 				try{
 					operando2=pila.pop();
-					operando1=pila.peek();
+					operando1=pila.pop();
 					pila.push((operando1*operando2));
 					break;
 				}

@@ -25,7 +25,6 @@ double val=0;
 	}
 	assertEquals(15 ,(int) val);
 	}
-	
 	@Test
 	public void Vectortest() {
 	calculadora= new CalPostFix("2");

@@ -39,7 +39,7 @@ public class StackDoble<E> extends AbstractStack<E> {
 		return lista.size();
 	}
 
-	public E peek(){
+	public E peek() throws Exception {
 		// TODO Auto-generated method stub
 		return lista.getFirst();
 	}
