@@ -8,9 +8,9 @@
  *Boris Cifuentes 14150
  *------------------------------------------------------------------
  *Interface Stack:
- *Esta clase genérica únicamente contiene los métodos genéricos a implementar en la controladora 
+ *Esta clase genÃ©rica Ãºnicamente contiene los mÃ©todos genÃ©ricos a implementar en la controladora 
  *de la stack.
- * @param <P>: Este parámetro permite establecer el tipo de dato con el que se desea trabajar la 
+ * @param <P>: Este parÃ¡metro permite establecer el tipo de dato con el que se desea trabajar la 
  * calculadora Stack.
  **/
 import java.io.*;
@@ -39,7 +39,7 @@ public class CalPostFix implements ADTCalculadora<Double>{
             
             String bfRead;
             while((bfRead = bf.readLine()) != null){ 
-                //Se leen las lineas hasta que encuentra una línea en blanco
+                //Se leen las lineas hasta que encuentra una lÃ­nea en blanco
                //Se almacena poco a poco 
             	texto= bfRead;
             	/*texto=texto+bfRead*/
@@ -92,7 +92,7 @@ public class CalPostFix implements ADTCalculadora<Double>{
 			case '+' :
 				try{
 				operando2=pila.pop();
-				operando1=pila.pop();
+				operando1=pila.peek();
 				pila.push((operando1+operando2));
 				break;
 				}
@@ -102,7 +102,7 @@ public class CalPostFix implements ADTCalculadora<Double>{
 			case '-':
 				try{
 					operando2=pila.pop();
-					operando1=pila.pop();
+					operando1=pila.peek();
 					pila.push((operando1-operando2));
 					break;
 				}
@@ -112,7 +112,7 @@ public class CalPostFix implements ADTCalculadora<Double>{
 			case '*':
 				try{
 					operando2=pila.pop();
-					operando1=pila.pop();
+					operando1=pila.peek();
 					pila.push((operando1*operando2));
 					break;
 				}
