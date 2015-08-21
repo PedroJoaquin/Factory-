@@ -4,26 +4,26 @@ import org.junit.Test;
 
 
 public class pruebasPilasListas {
-CalPostFix  calculadora;
-double val=0;
+	CalPostFix  calculadora;
+	double val=0;
 	@Test
 	public void Arraytest() {
-	 calculadora= new CalPostFix("1");
-	try {
-		calculadora.readFile("src\\texto.txt");
-	}  
-	catch (Exception e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-	try {
-		val=calculadora.calcular();
-	}
-	catch (Exception NullPointerException){
-		System.out.println("OPS, no es posible realizar la operaci髇");
-		System.exit(0);
-	}
-	assertEquals(15 ,(int) val);
+		calculadora= new CalPostFix("1");
+		try {
+			calculadora.readFile("src\\texto.txt");
+		}  
+		catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			val=calculadora.calcular();
+		}
+		catch (Exception NullPointerException){
+			System.out.println("OPS, no es posible realizar la operaci贸n");
+			System.exit(0);
+		}
+		assertEquals(15 ,(int) val);
 	}
 	@Test
 	public void Vectortest() {
@@ -39,7 +39,7 @@ double val=0;
 		val=calculadora.calcular();
 	}
 	catch (Exception NullPointerException){
-		System.out.println("OPS, no es posible realizar la operaci髇");
+		System.out.println("OPS, no es posible realizar la operaci贸n");
 		System.exit(0);
 	}
 	assertEquals(15 ,(int) val);
@@ -59,7 +59,7 @@ double val=0;
 				val=calculadora.calcular();
 			}
 			catch (Exception NullPointerException){
-				System.out.println("OPS, no es posible realizar la operaci髇");
+				System.out.println("OPS, no es posible realizar la operaci贸n");
 				System.exit(0);
 			}
 			assertEquals(15 ,(int) val);
@@ -79,9 +79,29 @@ double val=0;
 				val=calculadora.calcular();
 			}
 			catch (Exception NullPointerException){
-				System.out.println("OPS, no es posible realizar la operaci髇");
+				System.out.println("OPS, no es posible realizar la operaci贸n");
 				System.exit(0);
 			}
 			assertEquals(15 ,(int) val);
+	}
+	
+	@Test
+	public void DobleEnlazadaTest() {
+		calculadora= new CalPostFix("4");
+		try {
+			calculadora.readFile("src\\texto.txt");
+		}  
+		catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			val=calculadora.calcular();
+		}
+		catch (Exception NullPointerException){
+			System.out.println("OPS, no es posible realizar la operaci贸n");
+			System.exit(0);
+		}
+		assertEquals(4 ,(int) val);
 	}
 	}
