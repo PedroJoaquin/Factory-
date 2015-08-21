@@ -12,6 +12,13 @@
 
 public abstract class AbstractStack<E> implements ADTStack<E> {
 	
+/**
+ * Método: isEmpty
+ * Funcionalidad: Determinar si una pila está vacía
+ * pre: none
+ * post: true(empty), false (not empty)
+ *
+ * /
 	public boolean isEmpty() {
 		// TODO Auto-generated method stub
 		if(size()>0){
