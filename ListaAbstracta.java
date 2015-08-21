@@ -27,7 +27,7 @@ public abstract class ListaAbstracta<E> implements ListaEnlazada<E> {
 	
 	/**
 	 * Metodo size: Retorna el tamano de la lista 
-	 * @return
+	 * @return contador
 	 */
 	public int size(){
 		return count;

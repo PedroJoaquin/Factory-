@@ -1,8 +1,14 @@
-//Universidad Del valle de Guatemala 
-//Algoritmos y Estructura de Datos 
-//Interface de Listas Enlazadas 
-//Pedro Joaquin Castillo Coronado 14224
-//Freddy José Ruíz  Gatica 14592
+/**Universidad Del Valle de Guatemala 
+ *Algoritmos y Estructura de Datos 
+ *Seccion 10- Hoja de Trabajo 4
+ *------------------------------------------------------------------
+ *@author
+ *Pedro Joaquin Castillo 14224
+ *Freddy Jose Ruiz Gatica 14592
+ *------------------------------------------------------------------
+ *Clase DoblementeNelazada<E>: Esta clase permite la creacion de una lista
+ *doblemente enlazada  
+ **/
 
 public class DoblementeEnlazada<E> extends ListaAbstracta<E>{
 	//private int count;
@@ -23,32 +29,22 @@ public class DoblementeEnlazada<E> extends ListaAbstracta<E>{
 
 	public void addFirst(E value) {
 		// TODO Auto-generated method stub
-		if(cabeza==null){
-			cabeza = new DobleNodo<E>(value,null,null);
-			count++;
+		cabeza= new DobleNodo<E>(value,cabeza,null);
+		if (cola==null){
+			cola=cabeza;
 		}
-		else if(cabeza!=null){
-			DobleNodo<E> temp= cabeza;
-			cabeza= new DobleNodo<E>(value,temp,null);
-			temp.setPrev(cabeza);
-			count++;
-		}
+		count++;
 		}
 	
 
 	public E removeFirst() {
 		// TODO Auto-generated method stub
-		if(cabeza==null){
-			return null;
-		}
-		else if(cabeza!=null){
-			DobleNodo<E> temp =cabeza;
-			cabeza=temp.next();
+			E temp =cabeza.valor();
+			cabeza=cabeza.next();
 			cabeza.setPrev(null);
 			count--;
-			return temp.valor();
-		}
-		return null;
+			return temp;
+		
 	}
 
 	public E removeLast() {
