@@ -6,8 +6,9 @@
  *Pedro Joaquin Castillo 14224
  *Freddy Jose Ruiz Gatica 14592
  *------------------------------------------------------------------
- *Factory:Esta clase tiene como función generar uan instancia de 
+ *Factory:Esta clase tiene como funciÃ³n generar uan instancia de 
  *las diferentes clases Stack.  
+ * HOLA!!! Esto es una prueba XD
  **/
 
 public class Factory<E> {
